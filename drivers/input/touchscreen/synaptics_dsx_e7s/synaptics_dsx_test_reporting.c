@@ -6154,7 +6154,7 @@ static void test_report_work(struct work_struct *work)
 {
 	int retval;
 	unsigned char report_index[2];
-	unsigned int byte_delay_us;
+	unsigned int byte_delay_us = 0;
 	struct synaptics_rmi4_data *rmi4_data = f54->rmi4_data;
 
 	mutex_lock(&f54->status_mutex);
